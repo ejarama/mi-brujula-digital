@@ -88,7 +88,7 @@ export default function ManifestoSection() {
                 {!videoError ? (
                   <video
                     ref={videoRef}
-                    src="/assets/manifiesto.mp4"
+                    src={`${import.meta.env.BASE_URL}assets/manifiesto.mp4`}
                     className="video-element"
                     onPlay={() => setIsPlaying(true)}
                     onPause={() => setIsPlaying(false)}

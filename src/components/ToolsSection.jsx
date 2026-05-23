@@ -96,7 +96,7 @@ export default function ToolsSection() {
               
               <div className="mockup-display" onClick={() => setIsLightboxOpen(true)}>
                 <img 
-                  src="/assets/infografia-herramientas.png" 
+                  src={`${import.meta.env.BASE_URL}assets/infografia-herramientas.png`}
                   alt="Infografía: Mis 3 herramientas estrella para el aprendizaje digital" 
                   className="infographic-img"
                   onError={(e) => {
@@ -136,7 +136,7 @@ export default function ToolsSection() {
             </button>
             <div className="lightbox-body">
               <img 
-                src="/assets/infografia-herramientas.png" 
+                src={`${import.meta.env.BASE_URL}assets/infografia-herramientas.png`} 
                 alt="Infografía Completa" 
                 className="lightbox-img"
                 onError={(e) => {

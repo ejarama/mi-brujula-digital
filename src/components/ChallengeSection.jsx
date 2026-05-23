@@ -121,7 +121,7 @@ export default function ChallengeSection() {
 
                 <div className="storyboard-display-area" onClick={() => setIsLightboxOpen(true)}>
                   <img 
-                    src="/assets/historieta-solucion-digital.png" 
+                    src={`${import.meta.env.BASE_URL}assets/historieta-solucion-digital.png`}
                     alt="Historieta: Un desafío, una solución digital" 
                     className="storyboard-img"
                     onError={(e) => {
