@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Calendar, MessageSquare, BookOpen, HardDrive, CheckCircle, AlertTriangle, ChevronRight, ChevronLeft, Image, Activity, ZoomIn, X, Compass } from 'lucide-react';
+import { Calendar, MessageSquare, BookOpen, HardDrive, CheckCircle, AlertTriangle, ChevronRight, ChevronLeft, Image, Activity, ZoomIn, X, Compass, Info } from 'lucide-react';
 
 export default function ChallengeSection() {
   const [activeTab, setActiveTab] = useState('visual'); // 'visual' or 'flow'
@@ -142,6 +142,10 @@ export default function ChallengeSection() {
                     <span>Ampliar historieta</span>
                   </div>
                 </div>
+                <div className="mockup-footer">
+                  <Info size={16} className="info-icon" />
+                  <span>Historieta cocreada con Gemini IA para ilustrar la superación del estrés académico.</span>
+                </div>
               </div>
             </div>
           ) : (
@@ -248,7 +252,7 @@ export default function ChallengeSection() {
             </div>
             <div className="lightbox-footer">
               <h3>Historieta: Un desafío, una solución digital</h3>
-              <p>Visualización del flujo integral de superación académica aplicando competencias digitales.</p>
+              <p>Evidencia individual cocreada con Gemini IA para ilustrar la superación académica aplicando competencias digitales.</p>
             </div>
           </div>
         </div>
@@ -345,6 +349,23 @@ export default function ChallengeSection() {
           flex-direction: column;
         }
 
+        .mockup-footer {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          padding: 0.8rem 1.2rem;
+          background: rgba(5, 5, 16, 0.2);
+          border-top: 1px solid var(--border-glass);
+          font-size: 0.85rem;
+          color: var(--text-muted);
+          text-align: left;
+        }
+
+        .mockup-footer .info-icon {
+          color: var(--color-cyan);
+          flex-shrink: 0;
+        }
+
         .storyboard-display-area {
           height: 480px;
           background: #030010;
@@ -357,9 +378,11 @@ export default function ChallengeSection() {
         }
 
         .storyboard-img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
+          max-width: 100%;
+          max-height: 100%;
+          width: auto;
+          height: auto;
+          object-fit: contain;
           transition: transform 0.5s ease;
         }
 

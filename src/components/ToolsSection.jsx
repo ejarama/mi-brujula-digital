@@ -120,7 +120,7 @@ export default function ToolsSection() {
 
               <div className="mockup-footer">
                 <Info size={16} className="info-icon" />
-                <span>Diseño interactivo creado en Canva para el aprendizaje individual.</span>
+                <span>Infografía creada en Canva con el apoyo y asistencia de Gemini IA para la síntesis conceptual.</span>
               </div>
             </div>
           </div>
@@ -162,7 +162,7 @@ export default function ToolsSection() {
             </div>
             <div className="lightbox-footer">
               <h3>Infografía: Mis 3 herramientas estrella</h3>
-              <p>Evidencia individual del fortalecimiento de competencias digitales.</p>
+              <p>Evidencia individual creada con Canva y Gemini IA para el fortalecimiento de competencias digitales.</p>
             </div>
           </div>
         </div>
@@ -357,9 +357,11 @@ export default function ToolsSection() {
         }
 
         .infographic-img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
+          max-width: 100%;
+          max-height: 100%;
+          width: auto;
+          height: auto;
+          object-fit: contain;
           transition: transform 0.5s ease;
         }
 
